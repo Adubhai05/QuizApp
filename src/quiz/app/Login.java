@@ -45,7 +45,7 @@ public class Login extends JFrame implements ActionListener {
         leftPanel.add(brandText);
 
 
-        JLabel name = new JLabel("Enter your name");
+        JLabel name = new JLabel("Enter your name ");
         name.setBounds(60, 175, 300, 18);
         name.setFont(new Font("Segoe UI", Font.PLAIN, 13));
         name.setForeground(new Color(100, 100, 100));
