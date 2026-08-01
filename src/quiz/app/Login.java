@@ -28,6 +28,7 @@ public class Login extends JFrame implements ActionListener {
 
 
         // Logo image
+
         ImageIcon logoIconRaw = new ImageIcon(ClassLoader.getSystemResource("icons/brain.png"));
         Image logoScaled = logoIconRaw.getImage().getScaledInstance(40, 40, Image.SCALE_SMOOTH);
         JLabel logoIcon = new JLabel(new ImageIcon(logoScaled));
@@ -36,6 +37,7 @@ public class Login extends JFrame implements ActionListener {
 
 
         // "QuizMaster" brand text beside the logo
+
         JLabel brandText = new JLabel("QuizMaster");
         brandText.setBounds(108, 90, 200, 40);
         brandText.setFont(new Font("Segoe UI", Font.BOLD, 35));
@@ -43,7 +45,7 @@ public class Login extends JFrame implements ActionListener {
         leftPanel.add(brandText);
 
 
-        JLabel name = new JLabel("Enter your name to begin the Quiz");
+        JLabel name = new JLabel("Enter your name");
         name.setBounds(60, 175, 300, 18);
         name.setFont(new Font("Segoe UI", Font.PLAIN, 13));
         name.setForeground(new Color(100, 100, 100));
@@ -87,46 +89,47 @@ public class Login extends JFrame implements ActionListener {
 
 
 
-        // ------------------------ RIGHT side of the login frame (Just adding an image )----------------------
+        // ------------------------ RIGHT side of the login frame -----------------------------------------
 
 
         JPanel rightPanel = new JPanel();
         rightPanel.setLayout(null);
         rightPanel.setBounds(450, 0, 550, 500);
-        rightPanel.setBackground(new Color(205, 226, 251)); // light powder blue
+        rightPanel.setBackground(new Color(205, 226, 251));
         add(rightPanel);
 
 
 
-        // Logo (sits above the title)
+        // Logo
+
         ImageIcon logoRaw = new ImageIcon(ClassLoader.getSystemResource("icons/mind-control.png"));
         logoScaled = logoRaw.getImage().getScaledInstance(60, 60, Image.SCALE_SMOOTH);
         JLabel logo = new JLabel(new ImageIcon(logoScaled));
-        logo.setBounds(245, 160, 70, 70);
+        logo.setBounds(245, 140, 70, 70);
         logo.setHorizontalAlignment(SwingConstants.CENTER);
         rightPanel.add(logo);
 
 
 
-        // Title (centered, moderate size)
+        // Title
+
         JLabel title = new JLabel("Time to Quiz");
-        title.setBounds(0, 230, 550, 40);
+        title.setBounds(0, 220, 550, 40);
         title.setHorizontalAlignment(SwingConstants.CENTER);
-        title.setFont(new Font("Segoe Print", Font.BOLD, 40));
-        title.setForeground(new Color(30, 60, 110)); // deep navy, classy contrast on light blue
+        title.setFont(new Font("Segoe Print", Font.BOLD, 45));
+        title.setForeground(new Color(30, 60, 110));
         rightPanel.add(title);
 
 
 
         // Subtitle
+
         JLabel subtitle = new JLabel("Let's get started");
         subtitle.setBounds(0, 275, 550, 20);
         subtitle.setHorizontalAlignment(SwingConstants.CENTER);
-        subtitle.setFont(new Font("Segoe Print", Font.PLAIN, 11));
-        subtitle.setForeground(new Color(90, 110, 140)); // muted slate blue-gray
+        subtitle.setFont(new Font("Segoe Print", Font.BOLD, 13));
+        subtitle.setForeground(new Color(30, 60, 110));
         rightPanel.add(subtitle);
-
-
 
 
 
