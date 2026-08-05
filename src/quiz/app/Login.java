@@ -134,6 +134,7 @@ public class Login extends JFrame implements ActionListener {
 
 
 
+
         setSize(1000, 500);
         setLocation(200, 150);
         setResizable(false);
@@ -145,6 +146,15 @@ public class Login extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == Next) {
+            String playerName = text.getText().trim();
+            if (playerName.isEmpty()) {
+                JOptionPane.showMessageDialog(this,
+                        "Please enter your name to continue.",
+                        "Name Required", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+            dispose();
+            new TopicSelection(playerName);
 
         } else if (e.getSource() == back) {
             System.exit(50);
