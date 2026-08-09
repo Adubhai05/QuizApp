@@ -11,7 +11,7 @@ public class QuestionDAO {
 
     public static List<Question> getQuestionsByTopic(int topicId) {
         List<Question> questions = new ArrayList<>();
-        String query = "SELECT * FROM questions WHERE topic_id = ?";
+        String query = "SELECT * FROM questions WHERE topic_id = ? ORDER BY RANDOM() LIMIT 10";
 
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query)) {
