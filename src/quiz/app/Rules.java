@@ -73,8 +73,7 @@ public class Rules extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == start) {
             dispose();
-            // Quiz screen goes here later
-            System.out.println("Starting quiz: " + selectedTopic.getTopicName());
+            new Quiz(playerName, selectedTopic);
         } else {
             dispose();
             new TopicSelection(playerName);
